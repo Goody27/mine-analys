@@ -7,7 +7,7 @@ defmodule MineSweeperWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_mine_sweeper_key",
-    signing_salt: "u667wQ9D"
+    signing_salt: "/UHA/t1K"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]

@@ -8,8 +8,8 @@ import Config
 config :mine_sweeper, MineSweeper.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
   database: "mine_sweeper_test#{System.get_env("MIX_TEST_PARTITION")}",
+  hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
@@ -17,7 +17,7 @@ config :mine_sweeper, MineSweeper.Repo,
 # you can enable the server option below.
 config :mine_sweeper, MineSweeperWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "/GgRqphIwUXVKEBwRzGCVfKL+8cCcLWWYcZknVRRNFXF5He3rz0XFHpamM0E1hTT",
+  secret_key_base: "/qv6sO/qSm/DS2kOxHhsBztmGikcvjaD75rcvPfdH2M01qg2DsH9/iuHRPlXo/Gy",
   server: false
 
 # In test we don't send emails.

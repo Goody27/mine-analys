@@ -4,9 +4,8 @@ import Config
 config :mine_sweeper, MineSweeper.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
   database: "mine_sweeper_dev",
-  stacktrace: true,
+  hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -23,10 +22,11 @@ config :mine_sweeper, MineSweeperWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "yrdunVC5XuoE9ijqXCoqRzaX2lahSgp8sPgjpVp8LcSdDkS1FwMdoD0GeP7up3Hy",
+  secret_key_base: "ZSy3kj4v3bJ+Iv7s0XH4Ziy2W7y4xUO55Yq550idRNNxWRW/gUH39EyvQTQp6ptq",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support

@@ -59,14 +59,6 @@ defmodule MineSweeperWeb do
     end
   end
 
-  def component do
-    quote do
-      use Phoenix.Component
-
-      unquote(view_helpers())
-    end
-  end
-
   def router do
     quote do
       use Phoenix.Router
@@ -98,6 +90,7 @@ defmodule MineSweeperWeb do
       import MineSweeperWeb.ErrorHelpers
       import MineSweeperWeb.Gettext
       alias MineSweeperWeb.Router.Helpers, as: Routes
+      use PetalComponents
     end
   end
 

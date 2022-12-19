@@ -17,7 +17,7 @@ defmodule MineSweeperWeb.Router do
   scope "/", MineSweeperWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", MineSweeperView
   end
 
   # Other scopes may use custom stacks.
@@ -37,7 +37,6 @@ defmodule MineSweeperWeb.Router do
 
     scope "/" do
       pipe_through :browser
-
       live_dashboard "/dashboard", metrics: MineSweeperWeb.Telemetry
     end
   end
